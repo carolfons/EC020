@@ -8,15 +8,14 @@ space = np.loadtxt('space.csv',
 
 #total de linhas: 4323
 def ex01():
-    qtd = 0
-    qtdTotal = 0
-
+#   Formando array apenas com Sucessos
     success = space[space[:,7]=='Success'].shape[0]
+#   Formando array com o total de missões
     total = space.shape[0]
-    #varrendo o array
-    perc = (success*100)/(total) #percentagem
+#   Calculando a porcentagem
+    perc = (success*100)/(total)
+#   Saída de dados
     print(' A porcentagem de Sucessos foi de {} % ' .format(perc))
-
 
 def ex02():
 #   pegando um array apenas com as infos
