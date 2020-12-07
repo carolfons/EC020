@@ -6,3 +6,24 @@
 <h2 align = "center"> Listas de exercícios referentes a matéria EC020 (Tópicos Avançados)  </h2>
 
 
+<table border = "1" >
+ <tr >
+ <th align = "center"> <bold>Listas</bold> </th>
+ <th align = "center"><bold>Status</bold> </th>
+ </tr>
+ 
+ <tr >
+ <td> Lista 01 - Fundamentos Python </td>
+ <td> Feito </td>
+ </tr>
+ 
+ <tr >
+ <td> Lista 02 - Introdução a Coleções </td>
+ <td> Feito </td>
+ </tr>
+ 
+ <tr>
+ <td> Lista 03 - Dados com Numpy </td>
+ <td> Feito </td>
+ </tr>
+ 
