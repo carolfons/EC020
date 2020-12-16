@@ -34,21 +34,18 @@ def ex02():
     print('A média de dastos de uma missão é: %.2f' %media )
 
 def ex03():
-    totalUsa = 0
 
-#   criando um array cópia apenas com a coluna de Localização
-    arrLocation = space[1:, 2].copy()
-#   procurando os indices que possuem a string USA
-    arrLocationUsa = np.char.find(arrLocation, 'USA')
-#   somando o total de viagens realizadas pelos EUA
-    for i in arrLocationUsa:
-        if(i != -1):
-            totalUsa += 1
-
+#   Formando um array de localizações
+    location = space[:,2].copy()
+#   Utilizando a função find pra encontrar a string USA
+    usaLocation = np.char.find(location,'USA')
+#   Filtrando os valores diferentes de -1 e pegando a dimensão do array (valor total de missões)
+    usa = usaLocation[usaLocation != -1].shape[0]
 #   saída de dados
-    print("Os EUA realizaram um total de {} missões".format(totalUsa))
+    print("Os EUA realizaram um total de {} missões".format(usa))
 
 def ex04():
+
 #   separando as informações apenas da empresa SpaceX
     spacex = space[space[:, 1] == 'SpaceX']
 #   Separando apenas a coluna de custos e transformando de string em float
@@ -62,8 +59,6 @@ def ex05():
 
 #   formando um array apenas das empresas
     empresas = np.unique(space[:, 1])
-
-
 #   for para ler as informações
     for empresa in empresas:
 #       formando um array que conta quantas missões cada empresa fez
